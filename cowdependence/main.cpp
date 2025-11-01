@@ -2,7 +2,7 @@
 using namespace std;
 using ll = long long;
 
-int groups_for_x_positions(const vector<int> &p, int x) {
+int xPositions(const vector<int> &p, int x) {
     int m = (int)p.size();
     int cnt = 0;
     int i = 0;
@@ -83,12 +83,12 @@ int main() {
         int max_span = p.back() - p.front();
         vector<int> min_x(m + 1, 0); // min_x[t] for t=1..m
 
-        // binary search minimal x such that groups_for_x_positions(p, x) <= t
+        // binary search minimal x such that xPositions(p, x) <= t
         for (int t = 1; t <= m; ++t) {
             int lo = 0, hi = max_span;
             while (lo < hi) {
                 int mid = (lo + hi) >> 1;
-                if (groups_for_x_positions(p, mid) <= t) hi = mid;
+                if (xPositions(p, mid) <= t) hi = mid;
                 else lo = mid + 1;
             }
             min_x[t] = lo;
