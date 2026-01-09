@@ -19,7 +19,7 @@ def solve():
         right_b[i] = i if s[i-1] == 'B' else right_b[i+1]
     
     dp = [0] * (n + 1)
-    psm = [[0] * (n + 1) for _ in range(2)]
+    psm = [[0] * (n + 1) for i in range(2)]
     dp[0] = 1
     psm[0][0] = 1
     

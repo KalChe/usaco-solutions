@@ -119,7 +119,7 @@ def main():
         return
     it = iter(data)
     N = int(next(it))
-    a = [int(next(it)) for _ in range(N)]
+    a = [int(next(it)) for i in range(N)]
     res = solve(a)
     sys.stdout.write("\n".join(map(str, res)) + "\n")
 
