@@ -1,4 +1,4 @@
-## tc8 wrong, tc11 tle
+## tc8 wrong ����
 
 from collections import deque
 import sys
